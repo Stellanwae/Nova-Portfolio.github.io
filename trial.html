@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Skills Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .accordion {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+        }
+
+        .accordion-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        .accordion-content {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            max-height: 0;
+            padding: 0 15px;
+            background: #fff;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+
+        .accordion-content div {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .skills {
+            font-weight: bold;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rotate {
+            transform: rotate(90deg);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .project-tile {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-tile.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .project-tile img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .item1{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .item2{
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        .item3{
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .item4{
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        .item5{
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .item6{
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        .item7{
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            padding: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .project-tile:hover .overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .arrow {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-tile:hover .arrow {
+            opacity: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <table class="accordion">
+        <tbody>
+            <!-- Core Frontend Skills -->
+            <tr class="accordion-row">
+                <td>Core Frontend Skills</td>
+                <td>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="80" y2="60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div class="skills">HTML, CSS, JavaScript</div>
+                    <div>I have mastered these core technologies for building web pages and adding interactivity.</div>
+                </td>
+            </tr>
+
+            <!-- Frameworks & Libraries -->
+            <tr class="accordion-row">
+                <td>Frameworks & Libraries</td>
+                <td>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="80" y2="60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div class="skills">React.js, Tailwind CSS, Framer Motion</div>
+                    <div>These tools help me build dynamic and visually appealing applications.</div>
+                </td>
+            </tr>
+
+            <!-- Backend & APIs -->
+            <tr class="accordion-row">
+                <td>Backend & APIs</td>
+                <td>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="80" y2="60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div class="skills">Node.js, Express.js, REST APIs</div>
+                    <div>These technologies enable me to connect my frontend applications to the backend.</div>
+                </td>
+            </tr>
+
+            <!-- UI/UX & Design -->
+            <tr class="accordion-row">
+                <td>UI/UX & Design</td>
+                <td>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="80" y2="60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div class="skills">Responsive Design, Accessibility</div>
+                    <div>I ensure websites are mobile-friendly and accessible to all users.</div>
+                </td>
+            </tr>
+
+            <!-- Tools & DevOps -->
+            <tr class="accordion-row">
+                <td>Tools & DevOps</td>
+                <td>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20" y1="80" x2="80" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="80" y2="60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="80" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </td>
+            </tr>
+            <tr class="accordion-content">
+                <td colspan="2">
+                    <div class="skills">Git, Webpack, VS Code</div>
+                    <div>These tools streamline development, improve efficiency, and enhance collaboration.</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section class="projects">
+        <div class="project-tile large item1">
+            <img src="./assets/project2.jpg" alt="Project 1">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile small item2">
+            <img src="./assets/project2.jpg" alt="Project 2">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile large item3">
+            <img src="./assets/project2.jpg" alt="Project 1">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile small item4">
+            <img src="./assets/project2.jpg" alt="Project 2">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile large item5">
+            <img src="./assets/project2.jpg" alt="Project 1">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile small item6">
+            <img src="./assets/project2.jpg" alt="Project 2">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="project-tile large item7">
+            <img src="./assets/project2.jpg" alt="Project 1">
+            <div class="overlay">
+                <svg class="arrow" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20" y1="80" x2="80" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="80" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="80" y1="20" x2="40" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+       
+       
+        <!-- Add more project tiles as needed -->
+    </section>
+    
+
+    <script>
+        document.querySelectorAll(".accordion-row").forEach((row, index) => {
+            row.addEventListener("click", function () {
+                const content = document.querySelectorAll(".accordion-content")[index];
+                const arrow = row.querySelector(".arrow");
+
+                if (content.style.maxHeight === "0px" || !content.style.maxHeight) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.padding = "10px 15px";
+                } else {
+                    content.style.maxHeight = "0px";
+                    content.style.padding = "0 15px";
+                }
+                arrow.classList.toggle("rotate");
+            });
+        });
+    </script>
+
+</body>
+</html>

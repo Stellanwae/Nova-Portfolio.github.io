@@ -1,0 +1,17 @@
+Possible fonts: Ambidexter (h1) https://www.fontpair.co/fonts/ambidexter 
+                Basteleur (h1) https://www.fontpair.co/fonts/basteleur
+
+                body: Cabin https://fonts.google.com/specimen/Cabin
+🎨 Elegant & Bold Color Palette
+✅ Background (Soft & Luxurious): Champagne Beige #F8F0E3 (A warm, soft tone that feels premium and inviting.)
+✅ Primary Text (Bold & Contrasting): Charcoal Black #2C2C2C (Deep black with a soft tone—high contrast but not harsh.)
+✅ Accent (Elegant & Luxurious): Deep Gold #B8860B (Rich gold for buttons, highlights, and key sections.)
+✅ Secondary Text (Subtle Yet Refined): Warm Taupe #8D7B68 (A softer contrast for subheadings and descriptions.)
+✅ CTA (Powerful & Attention-Grabbing): Deep Burgundy #7D1128 (A statement color for action buttons.)
+
+✨ How This Palette Works for You
+✔ The background remains soft & elegant, setting a refined tone.
+✔ The main text is deep charcoal black, ensuring high readability and contrast.
+✔ Gold accents provide a luxurious touch, making elements pop without overpowering.
+✔ Burgundy CTA draws attention without clashing, guiding users toward action.
+✔ Taupe is used for secondary text, keeping a smooth balance.
